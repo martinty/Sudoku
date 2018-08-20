@@ -39,8 +39,8 @@ public:
     int get(unsigned int row, unsigned int col) const;
     bool isTileOriginal(unsigned int row, unsigned int col) const;
 
-    void loadBoardFromFile(string fileName);
-    void saveBoardToFile(string fileName);
+    void loadBoardFromFile(std::string fileName);
+    void saveBoardToFile(std::string fileName);
 
     void updateSet();
     void printSet();
@@ -59,7 +59,7 @@ public:
     bool onlyOneLegalPosition(unsigned int row, unsigned int col, int number) const;
     position findBoxCoordinates(unsigned int row, unsigned int col) const;
 
-    void solveSudoku(string fileName);
+    void solveSudoku(std::string fileName);
     void solveGame();
 
     void resetGame();
@@ -74,7 +74,7 @@ public:
     void diggingHole(int holes);
     void removeNotOriginalNumber();
 
-    friend ostream &operator<<(ostream &os, const SudokuBoard &board);
+    friend std::ostream &operator<<(std::ostream &os, const SudokuBoard &board);
 
 };
 
